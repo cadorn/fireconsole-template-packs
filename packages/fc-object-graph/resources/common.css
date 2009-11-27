@@ -1,0 +1,135 @@
+
+
+/*######################################################################
+#   text
+#####################################################################*/
+
+SPAN.__KEY__text {
+  color: #FF0000;
+}
+
+
+
+/*######################################################################
+#   constant
+#####################################################################*/
+
+SPAN.__KEY__constant {
+  color: #0000FF;
+}
+
+
+
+/*######################################################################
+#   array
+#####################################################################*/
+
+SPAN.__KEY__array > SPAN {
+    color: brown;
+    font-weight: bold;
+}
+
+SPAN.__KEY__array > DIV.element {
+    display: block;
+    padding-left: 20px;
+}
+
+SPAN.__KEY__array > SPAN.element {
+    padding-left: 2px;
+}
+
+SPAN.__KEY__array > .element > SPAN.separator {
+    color: brown;
+    font-weight: bold;
+}
+
+
+
+/*######################################################################
+#   map
+#####################################################################*/
+
+SPAN.__KEY__map > SPAN {
+    color: brown;
+    font-weight: bold;
+}
+
+SPAN.__KEY__map > DIV.pair {
+    display: block;
+    padding-left: 20px;
+}
+
+SPAN.__KEY__map > SPAN.pair {
+    padding-left: 2px;
+}
+
+SPAN.__KEY__map > .pair > SPAN.delimiter,
+SPAN.__KEY__map > .pair > SPAN.separator {
+    color: brown;
+    font-weight: bold;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+
+
+/*######################################################################
+#   reference
+#####################################################################*/
+
+SPAN.__KEY__reference {
+}
+
+
+
+/*######################################################################
+#   dictionary
+#####################################################################*/
+
+
+SPAN.__KEY__dictionary > SPAN {
+    color: brown;
+    font-weight: bold;
+}
+
+SPAN.__KEY__dictionary > SPAN.collapsed {
+    color: #0000FF;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+SPAN.__KEY__dictionary > SPAN.member {
+    color: brown;
+}
+
+SPAN.__KEY__dictionary > DIV.member {
+    display: block;
+    padding-left: 20px;
+}
+SPAN.__KEY__dictionary > DIV.member.expandable {
+    background-image: url(__RESOURCE__images/TwistyClosed.png);
+    background-repeat: no-repeat;
+    background-position: 6px 2px;
+}
+SPAN.__KEY__dictionary > DIV.member.expandable.expanded {
+    background-image: url(__RESOURCE__images/TwistyOpen.png);
+}
+
+SPAN.__KEY__dictionary > .member > SPAN.name {
+    color: #E59D07;
+}
+
+SPAN.__KEY__dictionary > .member > SPAN.value {
+}
+
+SPAN.__KEY__dictionary > .member > SPAN.delimiter,
+SPAN.__KEY__dictionary > .member > SPAN.separator {
+    color: brown;
+    font-weight: bold;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+

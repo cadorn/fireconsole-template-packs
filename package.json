@@ -5,8 +5,12 @@
     ],
     "using": {
         "lang-php": {
-            "catalog": "file://./catalog.json",
+            "catalog": "http://github.com/cadorn/fireconsole-template-packs/raw/master/catalog.json",
             "name": "lang-php"
+        },
+        "fc-object-graph": {
+            "catalog": "http://github.com/cadorn/fireconsole-template-packs/raw/master/catalog.json",
+            "name": "fc-object-graph"
         }
     }
 }

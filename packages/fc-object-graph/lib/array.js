@@ -8,12 +8,10 @@ template.supportsNode = function(node) {
 
 template.onLoad = function(pack, tags){with(tags) {
 
-    pack.addCss("common.css");
-
     return {
 
         tag:
-            SPAN({"class": pack.getKey()+"array"}, SPAN("array("),
+            SPAN({"class": pack.__KEY__+"array"}, SPAN("array("),
                 FOR("element", "$node|elementIterator",
                     DIV({"class": "element"},
                         TAG("$element.tag", {"node": "$element.node"}),
@@ -23,7 +21,7 @@ template.onLoad = function(pack, tags){with(tags) {
             SPAN(")")),
 
         shortTag:
-            SPAN({"class": pack.getKey()+"array"}, SPAN("array("),
+            SPAN({"class": pack.__KEY__+"array"}, SPAN("array("),
                 FOR("element", "$node|elementIterator",
                     SPAN({"class": "element"},
                         TAG("$element.tag", {"node": "$element.node"}),
@@ -36,7 +34,7 @@ template.onLoad = function(pack, tags){with(tags) {
             var elements = [];
             for( var i=0 ; i<node.value.length ; i++ ) {
                 elements.push({
-                    "tag": this.getRepTagForNode(node.value[i]),
+                    "tag": this.getRepForNode(node.value[i]).tag,
                     "node": node.value[i],
                     "more": (i<node.value.length-1)
                 });

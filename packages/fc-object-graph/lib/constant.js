@@ -8,14 +8,12 @@ template.supportsNode = function(node) {
 
 template.onLoad = function(pack, tags){with(tags) {
 
-    pack.addCss("common.css");
-
     return {
 
-        tag: SPAN({"class": pack.getKey()+"constant"},
+        tag: SPAN({"class": pack.__KEY__+"constant"},
                   "$node.value"),
         
-        shortTag: SPAN({"class": pack.getKey()+"constant"},
+        shortTag: SPAN({"class": pack.__KEY__+"constant"},
                        "$node.value")
     }    
 }};

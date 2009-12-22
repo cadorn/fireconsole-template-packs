@@ -8,8 +8,6 @@ template.supportsNode = function(node) {
 
 template.onLoad = function(pack, tags){with(tags) {
 
-    pack.addCss("common.css");
-
     return {
 
         CONST_Normal: "tag",
@@ -17,7 +15,7 @@ template.onLoad = function(pack, tags){with(tags) {
         CONST_Collapsed: "collapsedTag",
 
         tag:
-            SPAN({"class": pack.getKey()+"dictionary"}, SPAN("dictionary("),
+            SPAN({"class": pack.__KEY__+"dictionary"}, SPAN("dictionary("),
                 FOR("member", "$node|dictionaryIterator",
                     DIV({"class": "member", "$expandable":"$member.expandable", "_memberObject": "$member", "onclick": "$onClick"},
                         SPAN({"class": "name"}, "$member.name"),
@@ -31,12 +29,12 @@ template.onLoad = function(pack, tags){with(tags) {
             SPAN(")")),
 
         shortTag:
-            SPAN({"class": pack.getKey()+"dictionary"}, SPAN("dictionary("),
+            SPAN({"class": pack.__KEY__+"dictionary"}, SPAN("dictionary("),
                 SPAN({"class": "member"}, "members: $node|getMemberCount"),
             SPAN(")")),
 
         collapsedTag:
-            SPAN({"class": pack.getKey()+"dictionary"}, SPAN("dictionary("),
+            SPAN({"class": pack.__KEY__+"dictionary"}, SPAN("dictionary("),
                 SPAN({"class": "collapsed"}, "... $node|getMemberCount ..."),
             SPAN(")")),
         

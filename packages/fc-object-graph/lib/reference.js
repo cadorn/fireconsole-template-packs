@@ -8,8 +8,6 @@ template.supportsNode = function(node) {
 
 template.onLoad = function(pack, tags){with(tags) {
 
-    pack.addCss("common.css");
-
     return {
 
         CONST_Normal: "tag",
@@ -17,15 +15,15 @@ template.onLoad = function(pack, tags){with(tags) {
         CONST_Collapsed: "collapsedTag",
 
         tag:
-            SPAN({"class": pack.getKey()+"reference"},
+            SPAN({"class": pack.__KEY__+"reference"},
             TAG("$node,$CONST_Normal|getTag", {"node": "$node|getInstanceNode"})),
         
         shortTag:
-            SPAN({"class": pack.getKey()+"reference"},
+            SPAN({"class": pack.__KEY__+"reference"},
             TAG("$node,$CONST_Short|getTag", {"node": "$node|getInstanceNode"})),
 
         collapsedTag:
-            SPAN({"class": pack.getKey()+"reference"},
+            SPAN({"class": pack.__KEY__+"reference"},
             TAG("$node,$CONST_Collapsed|getTag", {"node": "$node|getInstanceNode"})),
 
             

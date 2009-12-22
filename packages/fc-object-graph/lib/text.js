@@ -8,17 +8,15 @@ template.supportsNode = function(node) {
 
 template.onLoad = function(pack, tags){with(tags) {
 
-    pack.addCss("common.css");
-
     return {
 
-        tag: SPAN({"class": pack.getKey()+"text"},
+        tag: SPAN({"class": pack.__KEY__+"text"},
                   "'",
                   FOR("line", "$node.value|lineIterator", "$line.value",
                       IF("$line.more", BR())),
                   "'"),
         
-        shortTag: SPAN({"class": pack.getKey()+"text"},
+        shortTag: SPAN({"class": pack.__KEY__+"text"},
                             "'$node.value|cropString'"),
                 
         cropString: function(text, limit){

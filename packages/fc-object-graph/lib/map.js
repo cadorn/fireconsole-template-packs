@@ -8,15 +8,13 @@ template.supportsNode = function(node) {
 
 template.onLoad = function(pack, tags){with(tags) {
 
-    pack.addCss("common.css");
-
     return {
 
         CONST_Normal: "tag",
         CONST_Short: "shortTag",
 
         tag:
-            SPAN({"class": pack.getKey()+"map"}, SPAN("map("),
+            SPAN({"class": pack.__KEY__+"map"}, SPAN("map("),
                 FOR("pair", "$node,$CONST_Normal|mapIterator",
                     DIV({"class": "pair"},
                         TAG("$pair.key.tag", {"node": "$pair.key.node"}),
@@ -29,7 +27,7 @@ template.onLoad = function(pack, tags){with(tags) {
 
 
         shortTag:
-            SPAN({"class": pack.getKey()+"map"}, SPAN("map("),
+            SPAN({"class": pack.__KEY__+"map"}, SPAN("map("),
                 FOR("pair", "$node,$CONST_Short|mapIterator",
                     SPAN({"class": "pair"},
                         TAG("$pair.key.tag", {"node": "$pair.key.node"}),

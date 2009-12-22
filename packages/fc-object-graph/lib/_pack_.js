@@ -1,11 +1,13 @@
 
-var FACTORY = require("factory", "template-pack");
+var PACK = require("pack", "template-pack");
 
 
-exports.Factory = function() {
-    var Factory = function() {};
-    Factory.prototype = FACTORY.Factory(module);
-    var self = new Factory();
+exports.Pack = function() {
+    var Pack = function() {};
+    Pack.prototype = PACK.Pack(module);
+    var self = new Pack();
+
+    self.registerCss("common.css");
 
     self.registerTemplate("text");
     self.registerTemplate("constant");

@@ -1,3 +1,11 @@
 {
-    "name": "lang-php"
+    "uid": "http://registry.pinf.org/cadorn.org/github/fireconsole-template-packs/packages/lang-php/",
+    "name": "lang-php",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git://github.com/cadorn/fireconsole-template-packs.git",
+            "path": "packages/lang-php"
+        }
+    ]
 }

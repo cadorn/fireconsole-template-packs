@@ -1,16 +1,6 @@
 {
     "uid": "http://registry.pinf.org/cadorn.org/github/fireconsole-template-packs/",
     "name": "fireconsole-template-packs",
-    "using": {
-        "lang-php": {
-            "catalog": "http://github.com/cadorn/fireconsole-template-packs/raw/master/catalog.json",
-            "name": "lang-php"
-        },
-        "fc-object-graph": {
-            "catalog": "http://github.com/cadorn/fireconsole-template-packs/raw/master/catalog.json",
-            "name": "fc-object-graph"
-        }
-    },
     "repositories": [
         {
             "type": "git",

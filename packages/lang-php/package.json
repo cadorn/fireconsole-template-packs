@@ -1,6 +1,13 @@
 {
     "uid": "http://registry.pinf.org/cadorn.org/github/fireconsole-template-packs/packages/lang-php/",
     "name": "lang-php",
+    "using": {
+        "template-pack": {
+            "catalog": "http://registry.pinf.org/cadorn.org/github/fireconsole/packages/catalog.json",
+            "name": "template-pack",
+            "revision": "master"
+        }
+    },
     "repositories": [
         {
             "type": "git",

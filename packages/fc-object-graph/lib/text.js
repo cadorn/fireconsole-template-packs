@@ -11,14 +11,14 @@ template.onLoad = function(pack, tags){with(tags) {
     return {
 
         tag: SPAN({"class": pack.__KEY__+"text"},
-                  "'",
                   FOR("line", "$node.value|lineIterator", "$line.value",
-                      IF("$line.more", BR())),
-                  "'"),
+                      IF("$line.more", BR())
+                  )
+             ),
         
-        shortTag: SPAN({"class": pack.__KEY__+"text"},
-                            "'$node.value|cropString'"),
-                
+        shortTag: SPAN({"class": pack.__KEY__+"text"}, "$node.value|cropString"),
+
+
         cropString: function(text, limit){
             text = text + "";
             
@@ -39,7 +39,7 @@ template.onLoad = function(pack, tags){with(tags) {
         },
         
         lineIterator: function(value) {
-            var parts = value.replace(/\r/g, "\\r").split("\n");
+            var parts = (""+value).replace(/\r/g, "\\r").split("\n");
             var lines = [];
             for( var i=0 ; i<parts.length ; i++ ) {
                 lines.push({"value": parts[i], "more": (i<parts.length-1)});

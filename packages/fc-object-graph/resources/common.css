@@ -5,7 +5,6 @@
 #####################################################################*/
 
 SPAN.__KEY__text {
-  color: #FF0000;
 }
 
 
@@ -25,8 +24,21 @@ SPAN.__KEY__constant {
 #####################################################################*/
 
 SPAN.__KEY__array > SPAN {
-    color: brown;
-    font-weight: bold;
+    color: #9C9C9C;
+}
+
+SPAN.__KEY__array > SPAN.collapsed {
+    color: #0000FF;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+SPAN.__KEY__array > SPAN.summary {
+    color: #0000FF;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 SPAN.__KEY__array > DIV.element {
@@ -38,9 +50,20 @@ SPAN.__KEY__array > SPAN.element {
     padding-left: 2px;
 }
 
+SPAN.__KEY__array > DIV.element.expandable {
+    background-image: url(__RESOURCE__images/TwistyClosed.png);
+    background-repeat: no-repeat;
+    background-position: 6px 2px;
+}
+SPAN.__KEY__array > DIV.element.expandable.expanded {
+    background-image: url(__RESOURCE__images/TwistyOpen.png);
+}
+
+SPAN.__KEY__array > .element > SPAN.value {
+}
+
 SPAN.__KEY__array > .element > SPAN.separator {
-    color: brown;
-    font-weight: bold;
+    color: #9C9C9C;
 }
 
 
@@ -50,7 +73,7 @@ SPAN.__KEY__array > .element > SPAN.separator {
 #####################################################################*/
 
 SPAN.__KEY__map > SPAN {
-    color: brown;
+    color: #9C9C9C;
     font-weight: bold;
 }
 
@@ -65,8 +88,7 @@ SPAN.__KEY__map > SPAN.pair {
 
 SPAN.__KEY__map > .pair > SPAN.delimiter,
 SPAN.__KEY__map > .pair > SPAN.separator {
-    color: brown;
-    font-weight: bold;
+    color: #9C9C9C;
     padding-left: 2px;
     padding-right: 2px;
 }
@@ -89,8 +111,7 @@ SPAN.__KEY__reference {
 
 
 SPAN.__KEY__dictionary > SPAN {
-    color: brown;
-    font-weight: bold;
+    color: #9C9C9C;
 }
 
 SPAN.__KEY__dictionary > SPAN.collapsed {
@@ -100,8 +121,15 @@ SPAN.__KEY__dictionary > SPAN.collapsed {
     padding-right: 5px;
 }
 
+SPAN.__KEY__dictionary > SPAN.summary {
+    color: #0000FF;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 SPAN.__KEY__dictionary > SPAN.member {
-    color: brown;
+    color: #9C9C9C;
 }
 
 SPAN.__KEY__dictionary > DIV.member {
@@ -126,10 +154,8 @@ SPAN.__KEY__dictionary > .member > SPAN.value {
 
 SPAN.__KEY__dictionary > .member > SPAN.delimiter,
 SPAN.__KEY__dictionary > .member > SPAN.separator {
-    color: brown;
-    font-weight: bold;
+    color: #9C9C9C;
     padding-left: 2px;
     padding-right: 2px;
 }
-
 

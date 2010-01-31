@@ -1,4 +1,10 @@
 
+
+
+function dump(obj) { print(require('test/jsdump').jsDump.parse(obj)) };
+
+
+
 var TEMPLATE = require("template", "template-pack");
 var template = exports.template = TEMPLATE.Template(module);
 
@@ -30,7 +36,7 @@ template.onLoad = function(pack, tags){with(tags) {
 
         shortTag:
             SPAN({"class": pack.__KEY__+"dictionary"}, SPAN("dictionary("),
-                SPAN({"class": "member"}, "members: $node|getMemberCount"),
+                SPAN({"class": "summary"}, "... $node|getMemberCount ..."),
             SPAN(")")),
 
         collapsedTag:

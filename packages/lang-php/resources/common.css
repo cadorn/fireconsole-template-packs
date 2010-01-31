@@ -1,0 +1,184 @@
+
+/*######################################################################
+#   trace
+#####################################################################*/
+
+DIV.__KEY__trace {
+    padding: 0px;
+    margin: 0px;
+}
+
+DIV.__KEY__trace > .head {
+  margin: 0px;
+  padding-bottom: 1px;
+  padding-top: 2px;
+  padding-right: 10px;
+  background-color: #f0f3f9;
+}
+
+DIV.__KEY__trace > .head > .title {
+  cursor: pointer;
+  padding-left: 22px;    
+  padding-bottom: 0px;
+  padding-top: 2px;
+  background-image: url(__RESOURCE__images/traceIcon.png);
+  background-repeat: no-repeat;
+  background-position: 4px 2px;
+  color: black;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+DIV.__KEY__trace > .head > .title:hover {
+    color: blue;
+    text-decoration: none !important;
+}
+
+DIV.__KEY__trace > .head > .title:hover {
+    text-decoration: underline !important;
+    color: blue;
+}
+
+DIV.__KEY__trace.opened {
+    border-bottom: 1px solid #D7D7D7;
+}
+
+DIV.__KEY__trace > .head > .info {
+    display: none;
+    padding-left: 10px;
+    margin-top: 2px;
+    padding-bottom: 10px;
+}
+
+DIV.__KEY__trace.opened > .head > .info {
+    display: block;
+}
+
+DIV.__KEY__trace.opened > .head > .info > TABLE TBODY TR TD.headerFile {
+  white-space:nowrap;
+  font-weight: bold;
+}
+
+DIV.__KEY__trace.opened > .head > .info > TABLE TBODY TR TD.headerLine {
+  white-space:nowrap;
+  font-weight: bold;
+  text-align: right;
+}
+DIV.__KEY__trace.opened > .head > .info > TABLE TBODY TR TD.headerInst {
+  white-space:nowrap;
+  font-weight: bold;
+  padding-left: 10px;
+  width: 100%;
+}
+
+DIV.__KEY__trace.opened > .head > .info > TABLE TBODY TR TD.cellFile {
+  white-space:nowrap;
+  vertical-align: top;
+  border:1px solid #D7D7D7;
+  padding-right: 10px;
+}
+DIV.__KEY__trace.opened > .head > .info > TABLE TBODY TR TD.cellLine {
+  white-space:nowrap;
+  vertical-align: top;
+  border:1px solid #D7D7D7;
+  text-align: right;
+}
+DIV.__KEY__trace.opened > .head > .info > TABLE TBODY TR TD.cellInst {
+  border:1px solid #D7D7D7;
+  vertical-align: top;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+DIV.__KEY__trace.opened > .head > .info > TABLE TBODY TR TD.cellInst .separator {
+    padding-left: 1px;
+    padding-right: 3px;
+}
+
+
+/*######################################################################
+#   exception
+#####################################################################*/
+
+DIV.__KEY__exception > .head {
+  background-color: LightYellow;
+}
+
+DIV.__KEY__exception > .head > .title {
+  background-image: url(chrome://firebug/skin/errorIcon.png);
+  color: red;
+  text-decoration: underline;
+}
+
+
+
+/*######################################################################
+#   table
+#####################################################################*/
+
+DIV.__KEY__table {
+    padding: 0px;
+    margin: 0px;
+    background-color: #f0f3f9;
+}
+
+DIV.__KEY__table > .head {
+  margin: 0px;
+  padding-bottom: 1px;
+  padding-top: 2px;
+  padding-right: 10px;
+}
+
+DIV.__KEY__table > .head > .title {
+  cursor: pointer;
+  padding-left: 23px;    
+  padding-bottom: 0px;
+  padding-top: 2px;
+  background-image: url(__RESOURCE__images/tableIcon.png);
+  background-repeat: no-repeat;
+  background-position: 4px 2px;
+  color: black;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+DIV.__KEY__table > .head > .title:hover {
+    color: blue;
+    text-decoration: none !important;
+}
+
+DIV.__KEY__table > .head > .title:hover {
+    text-decoration: underline !important;
+    color: blue;
+}
+
+DIV.__KEY__table.opened {
+    border-bottom: 1px solid #D7D7D7;
+}
+
+
+DIV.__KEY__table > .head > .info {
+    display: none;
+    padding-left: 10px;
+    margin-top: 2px;
+    padding-bottom: 10px;
+}
+
+DIV.__KEY__table.opened > .head > .info {
+    display: block;
+}
+
+
+DIV.__KEY__table.opened > .head > .info > TABLE TBODY TR TD.header {
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+DIV.__KEY__table.opened > .head > .info > TABLE TBODY TR TD.cell {
+  vertical-align: top;
+  border:1px solid #D7D7D7;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+

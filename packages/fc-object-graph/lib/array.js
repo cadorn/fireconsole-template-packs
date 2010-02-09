@@ -48,10 +48,6 @@ template.onLoad = function(pack, tags){with(tags) {
 
 
         getElementCount: function(node) {
-
-dump(node);
-            
-            
             return node.value.length || 0;
         },
 

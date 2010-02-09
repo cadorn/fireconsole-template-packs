@@ -37,6 +37,16 @@ template.onLoad = function(pack, tags){with(tags) {
                     )
                 ),
             SPAN(")")),
+
+        collapsedTag: 
+            SPAN({"class": pack.__KEY__+"map"}, SPAN("map("),
+                SPAN({"class": "collapsed"}, "... $node|getItemCount ..."),
+            SPAN(")")),
+
+        
+        getItemCount: function(node) {
+            return node.value.length;
+        },
         
         mapIterator: function(node, type) {
             var pairs = [];

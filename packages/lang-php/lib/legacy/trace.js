@@ -6,15 +6,11 @@ function dump(obj) { print(require('test/jsdump').jsDump.parse(obj)) };
 var TEMPLATE = require("template", "template-pack");
 var template = exports.template = TEMPLATE.Template(module);
 
-template.supportsNode = function(node) {
-    return (node.type=="trace");
-};
-
 exports.onLoad = template.onLoad = function(pack, tags, options){with(tags) {
 
     return {
 
-        tag: DIV({"class": pack.__KEY__+"trace __fc_no_inspect" +
+        tag: DIV({"class": pack.__KEY__+"legacy-trace __fc_no_inspect" +
                   ((options && options["class"])?" "+options["class"]:"")},
                  DIV({"class": "head", "_dataNode": "$node"},
                     A({"class": "title", "onclick": "$onToggleBody"}, "$node|getCaption"))
@@ -61,7 +57,7 @@ exports.onLoad = template.onLoad = function(pack, tags, options){with(tags) {
         onToggleBody: function(event)
         {
             var target = event.currentTarget;
-            var logRow = this.util.getAncestorByClass(target, pack.__KEY__+"trace");
+            var logRow = this.util.getAncestorByClass(target, pack.__KEY__+"legacy-trace");
             if(this.util.isLeftClick(event)) {
                 this.util.toggleClass(logRow, "opened");
                 if(this.util.hasClass(logRow, "opened")) {

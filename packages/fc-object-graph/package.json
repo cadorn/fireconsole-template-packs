@@ -14,5 +14,8 @@
             "url": "git://github.com/cadorn/fireconsole-template-packs.git",
             "path": "packages/fc-object-graph"
         }
-    ]
+    ],
+    "implements": {
+        "http://registry.pinf.org/cadorn.org/github/fireconsole/@meta/template-pack/0.1.0": {}
+    }
 }

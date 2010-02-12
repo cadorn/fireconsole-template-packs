@@ -6,15 +6,11 @@ function dump(obj) { print(require('test/jsdump').jsDump.parse(obj)) };
 var TEMPLATE = require("template", "template-pack");
 var template = exports.template = TEMPLATE.Template(module);
 
-template.supportsNode = function(node) {
-    return (node.type=="table");
-};
-
 template.onLoad = function(pack, tags){with(tags) {
 
     return {
 
-        tag: DIV({"class": pack.__KEY__+"table __fc_no_inspect"},
+        tag: DIV({"class": pack.__KEY__+"legacy-table __fc_no_inspect"},
                  DIV({"class": "head", "_dataNode": "$node"},
                      A({"class": "title", "onclick": "$toggleBody"}, "$node|getCaption")
              )),
@@ -46,7 +42,7 @@ template.onLoad = function(pack, tags){with(tags) {
         toggleBody: function(event)
         {
             var target = event.currentTarget;
-            var logRow = this.util.getAncestorByClass(target, pack.__KEY__+"table");
+            var logRow = this.util.getAncestorByClass(target, pack.__KEY__+"legacy-table");
             if (this.util.isLeftClick(event)) {
                 this.util.toggleClass(logRow, "opened");
                 if (this.util.hasClass(logRow, "opened")) {

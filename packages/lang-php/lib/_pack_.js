@@ -9,9 +9,9 @@ exports.Pack = function() {
 
     self.registerCss("common.css");
 
-    self.registerTemplate("table");
-    self.registerTemplate("trace");
-    self.registerTemplate("exception");
-    
+    self.registerTemplate("legacy/table");
+    self.registerTemplate("legacy/trace");
+    self.registerTemplate("legacy/exception");
+
     return self;
 }

@@ -5,7 +5,7 @@
         "template-pack": {
             "catalog": "http://registry.pinf.org/cadorn.org/github/fireconsole/packages/catalog.json",
             "name": "template-pack",
-            "revision": "master"
+            "revision": "0.1.0alpha1"
         }
     },
     "repositories": [
@@ -14,5 +14,8 @@
             "url": "git://github.com/cadorn/fireconsole-template-packs.git",
             "path": "packages/lang-php"
         }
-    ]
+    ],
+    "implements": {
+        "http://registry.pinf.org/cadorn.org/github/fireconsole/@meta/template-pack/0.1.0": {}
+    }
 }
